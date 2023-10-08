@@ -1,4 +1,4 @@
-#Data Analyst Portfolio Project Repository
+Data Analyst Portfolio Project Repository
 
 This repository will hold all of the code and queries from projects that I have worked on. 
 
