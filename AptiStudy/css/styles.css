@@ -1,0 +1,746 @@
+/* natural box model */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+    UTILITIES
+*/
+
+/* hides an element, but not from screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* no break */
+.nobr {
+    white-space: nowrap;
+}
+
+/*--------------------------------------
+    GENERAL / STRUCTURE
+--------------------------------------*/
+
+/* home.php */
+#left_page {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#right_page {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    border-left: 1px solid #191919;
+}
+
+#n_container {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+/* create-profile.php */
+.rvt-file {
+    padding-bottom: 20px;
+}
+
+.form_row {
+    display: flex;
+}
+
+/* questionnaire  */
+.parent-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-spacing: 10px;
+
+  }
+
+/* .comp_title {
+
+} */
+
+
+.rvt-button-groupquiz {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    
+}
+
+.question1 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.question2 {
+    margin-bottom: 40px;
+}
+.question3 {
+    margin-bottom: 40px;
+}
+.question4 {
+    margin-bottom: 40px;
+}
+/* .question5 {
+    
+} */
+
+.profile_header {
+    margin-bottom: -60px;
+}
+
+.profile_picture {
+    padding-bottom: 45px;
+    border-bottom: 1px solid #4c5a691c;
+    margin-bottom: -30px;
+}
+
+.matches_profile {
+    padding-bottom: 30px;
+}
+
+.comp_quest_p {
+    padding-top: 10px;
+}
+
+/*--------------------------------------
+    TYPOGRAPHY / LINKS / IMAGES
+--------------------------------------*/
+
+/* create-profile.php */
+.profile_upload {
+    max-width: 33%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.first_name {
+    width: 60%;
+}
+
+.last_name {
+    width: 60%;
+}
+
+.first_name {
+    width: 60%;
+}
+
+.user_name {
+    width: 60%;
+}
+
+.college_standing {
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
+
+.cancel_profile {
+    width: 80px;
+	height: 40px;
+    padding-top: 8px;
+	background-color: #df3603;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: black;
+	text-decoration: none;
+    color: white;
+}
+
+.cancel_profile:hover {
+    color: white;
+    background-color: #b11c00;
+}
+
+#comp_quest:active, #comp_quest:hover {
+    cursor: default;
+}
+
+#study_groups:active, #study_groups:hover {
+    cursor: default;
+}
+
+#classroom_booking:active, #classroom_booking:hover {
+    cursor: default;
+}
+
+#calendar_features:active, #calendar_features:hover {
+    cursor: default;
+}
+
+.item_boxes {
+    margin-bottom: 65px;
+    cursor: default;
+}
+
+.comp_quest_button {
+    width: 250px;
+	height: 40px;
+    padding: 8px;
+	background-color: #006298;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+}
+.comp_quest_button:hover {
+    color: white;
+    background-color: #004f80;
+}
+
+.edit_profile_button {
+    font-size: 16px;
+    float: right;
+    padding: 8px;
+	background-color: #006298;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+}
+.edit_profile_button:hover {
+    color: white;
+    background-color: #004f80;
+}
+
+.delete_profile_button {
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+    padding: 8px;
+	background-color: #b11c00;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+}
+.delete_profile_button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #df3603;
+}
+
+.logout_button {
+    font-size: 14px;
+    float: right;
+    padding: 6px;
+	background-color: #b11c00;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+    color: white;
+}
+.logout_button:hover {
+    color: white;
+    background-color: #df3603;
+}
+
+.new_ticket_button {
+    width: 120px;
+	height: 40px;
+    padding: 8px;
+	background-color: #006298;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+}
+.new_ticket_button:hover {
+    color: white;
+    background-color: #004f80;
+}
+
+.type_of_assistance li {
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.box_descriptor {
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 35px;
+    transition: all .175s ease-in-out;
+    margin-right: 202px;
+}
+
+.box_descriptor:hover {
+    transform: scale(1.115);
+    margin-left: 45px;
+    color: white;
+    margin-right: 157px;
+}
+
+.new_ticket_button {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.view_ticket_link {
+    background-color: white;
+    border: none;
+    color: 	#006298;
+    cursor: pointer;
+}
+
+.view_ticket_link:hover, .view_tickets_link:active {
+    background-color: white;
+    border: none;
+    color: #00385f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ticket_home_link {
+    display: block;
+    margin-left: 25px;
+    margin-top: -21px;
+    color: 	#006298;
+}
+
+.ticket_home_link:hover, .ticket_home_link:active {
+    color: #00385f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+p.shift_ticket_info {
+    font-size: 14px;
+    margin-left: 35px;
+    margin-bottom: -15px;
+}
+
+.rvt-badge.rvt-badge--success-secondary {
+    transition: all .175s ease-in-out;
+}
+
+.rvt-badge.rvt-badge--success-secondary:hover {
+    color: white;
+    background-color: #329345;
+    border: 2px solid #005c31;
+    cursor: default;
+}
+
+.rvt-badge {
+    transition: all .175s ease-in-out;
+}
+
+.rvt-badge:hover {
+    color: white;
+    background-color: #75838f;
+    border: 2px solid black;
+    cursor: default;
+}
+
+.delete_ticket_button {
+    position: relative;
+    top: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px 10px 4px 10px;
+	background-color: #b11c00;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+}
+.delete_ticket_button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #df3603;
+}
+
+.profile_image {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    background: #EDEBEB;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 35px;
+}
+
+.profile_image img {
+    display: inline;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    justify-content: center;
+}
+
+/* .view_group_image {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+    background: #EDEBEB;
+    border-radius: 10px;
+    display: flex;
+    margin-right: 35px;
+} */
+
+.group_image {
+    display: block;
+}
+
+.group_image img {
+    width: 299px;
+    height: 185px;
+    display: inline-block;
+    background-color: #EDEBEB;
+    margin: 0 auto;
+    margin-right: 35px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.meeting_info {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #4c5a691c;
+}
+
+.location_info {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #4c5a691c;
+}
+
+.map_button {
+    display: block;
+    width: 100px;
+	height: 40px;
+    font-size: 16px;
+    padding: 8px;
+	background-color: #006298;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+.map_button:hover {
+    color: white;
+    background-color: #004f80;
+}
+
+.location {
+    margin-bottom: 20px;
+}
+
+.meeting_info_posted {
+    margin-bottom: 50px;
+}
+
+.group_upload {
+    max-width: 50%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.group_upload_2 {
+    max-width: 50% !important;
+    height: auto !important;
+    padding-bottom: 30px !important;
+    margin-top: 60px !important;
+}
+
+.profile_name_h1 {
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.group_name_h1 {
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.leave_group_button {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+	background-color: #b11c00;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+}
+
+.leave_group_button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #df3603;
+}
+
+.fade_animation {
+    animation: fade 3s;
+    -webkit-animation: fade 3s;
+    -moz-animation: fade 3s;
+    -o-animation: fade 3s;
+    -ms-animation: fade 3s;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-ms-keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#confirmation_bar {
+    background-color: #D1FAE5; /* Light green background color */
+    color: #065F46;
+    padding: 1px 10px 1px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fade 3s;
+    -webkit-animation: fade 3s;
+    -moz-animation: fade 3s;
+    -o-animation: fade 3s;
+    -ms-animation: fade 3s;
+}
+
+#close_button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #065F46;
+}
+
+.search_bar {
+    float: left;
+    margin-top: 30px;
+    margin-left: 5%;
+}
+
+.outer {
+    overflow: hidden;
+}
+
+.search_field {
+    height: 40px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.search_button {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+	background-color: #006298;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+}
+
+.search_button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #004f80;
+}
+
+.upcoming {
+    display: block;
+    margin-top: 15px;
+}
+
+.upcoming_meetings {
+    display: inline;
+    color: 	#006298;
+}
+
+.upcoming_meetings:hover, .upcoming_meetings:active {
+    color: #00385f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.close_map_button {
+    position:absolute; 
+    top: 21px; 
+    right: 85px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px;
+	background-color: #b11c00;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	text-decoration: none;
+    color: white;
+}
+.close_map_button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #df3603;
+}
+
+/*--------------------------------------
+    PAGE
+--------------------------------------*/
+body {
+    background-color:#EDEBEB;
+}
+
+.tickets {
+    background-color: white;
+    display: flex;
+    overflow-x: scroll;
+}
+
+/*--------------------------------------
+    UTILITIES
+--------------------------------------*/
+
+/* create-group.php */
+#sbutton {
+    background-color: #990000;
+    color: white;
+    margin-left: 1.6em;
+    padding: 5px 8px;
+    border: #191919;
+    border-radius: 12%;
+}
+
+.leave_home {
+    color: white;
+}
+
+@media (min-height: 0) {
+    .meeting_footer {display: none;}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-height: 800px) {
+    .footer_scrolling {display: block;}
+    .footer {display: none;}
+}
+
+@media (min-height: 630px) {
+    .meeting_footer {display: block;}
+    .meeting_footer_scrolling {display: none;}
+}
+
+@media (min-width: 576px) {
+    .search_bar {margin-left: 10%;}
+}
+
+@media (min-width: 740px) {
+    .search_bar {margin-left: 5%;}
+    #mapStyling {width: 600px !important; height: 400px !important;}
+}
+
+@media (min-width: 1236px) {
+    .search_bar {margin-left: 10%;}
+    #mapStyling {width: 1000px !important; height: 667px !important;}
+}
+
+@media (min-width: 1384px) {
+    .search_bar {margin-left: 13%;}
+}
+
+@media (min-width: 1532px) {
+    .search_bar {margin-left: 16%;}
+}
+
+@media (min-width: 1680px) {
+    .search_bar {margin-left: 19%;}
+}
+
+@media (min-width: 1828px) {
+    .search_bar {margin-left: 22%;}
+}
+
+@media (min-width: 1976px) {
+    .search_bar {margin-left: 23.5%;}
+}
+
+@media (min-width: 2124px) {
+    .search_bar {margin-left: 26%;}
+}
+
+@media (min-width: 2272px) {
+    .search_bar {margin-left: 26%;}
+}
+
+@media (min-width: 2420px) {
+    .search_bar {margin-left: 27%;}
+}
+
+@media (min-width: 2568px) {
+    .search_bar {margin-left: 29%;}
+}
+
+@media (min-width: 2716px) {
+    .search_bar {margin-left: 30.5%;}
+}
+
+@media (min-width: 2864px) {
+    .search_bar {margin-left: 31%;}
+}
+
+@media (min-width: 3012px) {
+    .search_bar {margin-left: 31.5%;}
+}
+
+@media (min-width: 3160px) {
+    .search_bar {margin-left: 33%;}
+}
+
+@media (min-width: 3308px) {
+    .search_bar {margin-left: 34.5%;}
+}
+
+@media (min-width: 3480px) {
+    .search_bar {margin-left: 36%;}
+}

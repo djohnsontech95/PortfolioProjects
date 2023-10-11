@@ -1,0 +1,10 @@
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.rvt-footer-base {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
