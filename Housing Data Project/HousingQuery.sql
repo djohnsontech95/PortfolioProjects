@@ -1,3 +1,6 @@
+SELECT *
+FROM PortfolioProject.dbo.HousingData;
+
 -- Standardize Date Format --
 
 ALTER TABLE HousingData
@@ -99,5 +102,44 @@ SET SoldAsVacant = CASE WHEN SoldAsVacant = 'Y' THEN 'Yes'
 	 ELSE SoldAsVacant
 	 END;
 
--- Remove Duplicates --
+-- Remove duplicates --
 
+--WITH RowNumCTE AS (
+--SELECT *,
+--	ROW_NUMBER() OVER (
+--	PARTITION BY ParcelID,
+--				 PropertyAddress,
+--				 SaleDate,
+--				 LegalReference
+--				 ORDER BY
+--					UniqueID
+--					) row_num
+--FROM PortfolioProject.dbo.HousingData
+--)
+--DELETE
+--FROM  RowNumCTE
+--WHERE row_num > 1;
+
+WITH RowNumCTE AS (
+SELECT *,
+	ROW_NUMBER() OVER (
+	PARTITION BY ParcelID,
+				 PropertyAddress,
+				 SaleDate,
+				 LegalReference
+				 ORDER BY
+					UniqueID
+					) row_num
+FROM PortfolioProject.dbo.HousingData
+)
+SELECT *
+FROM  RowNumCTE
+WHERE row_num > 1;
+
+-- Delete unused columns --
+
+ALTER TABLE PortfolioProject.dbo.HousingData
+DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress;
+
+ALTER TABLE PortfolioProject.dbo.HousingData
+DROP COlUMN SaleDate;
